@@ -8,7 +8,15 @@ class CharacterController < Sinatra::Base
   end
 
   get "/characters" do
+    @characters = Character.all
     erb :'characters/index'
+  end
+
+  get '/characters/:id' do
+    id=params[:id]
+    @character = Character.find_by_id(id)  
+    #view
+    erb :'characters/show'
   end
 
 end

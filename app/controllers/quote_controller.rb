@@ -7,7 +7,7 @@ class QuotesController < Sinatra::Base
     set :views, 'app/views'
   end
 
-  get "/" do
+  get "/quotes/" do
     erb :welcome
   end
 
