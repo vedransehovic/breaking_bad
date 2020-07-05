@@ -1,6 +1,6 @@
 require './config/environment'
 
-class CharacterController < Sinatra::Base
+class CharacterController < ApplicationController
 
   configure do
     set :public_folder, 'public'

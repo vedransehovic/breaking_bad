@@ -11,21 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200704192646) do
+ActiveRecord::Schema.define(version: 20200705202223) do
 
   create_table "characters", force: :cascade do |t|
-    t.string "name"
-    t.string "birthday"
-    t.string "img"
-    t.string "actor"
-    t.string "occupation"
-    t.string "nickname"
-    t.string "status"
+    t.string  "name"
+    t.string  "birthday"
+    t.string  "img"
+    t.string  "actor"
+    t.string  "occupation"
+    t.string  "nickname"
+    t.string  "status"
+    t.integer "user_id"
   end
 
   create_table "quotes", force: :cascade do |t|
-    t.string "author"
-    t.string "quote"
+    t.string  "author"
+    t.string  "quote"
+    t.integer "character_id"
   end
 
 end
