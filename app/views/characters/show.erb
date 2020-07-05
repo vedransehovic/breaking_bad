@@ -5,9 +5,20 @@
 </header>
 
 <div class="w3-content w3-justify w3-text-grey w3-padding-64">
-<img src="<%= @character.img %>">
+<img src="<%= @character.img %>" width="400px">
 <p>BIRTHDAY: <%= @character.birthday %></p>
 <p>ACTOR: <%= @character.actor %></p>
 <p>NICKNAME: <%= @character.nickname %></p>
 <p>STATUS: <%= @character.status %></p>
+<br><br>
+<% if !@quotes.empty? %>
+    QUOTES:
+    <p>
+    <ul>
+    <% @quotes.each do |quote| %>
+        <li><%= quote.quote %></li>
+    <% end %>
+    </ul>
+    </p>
+<% end %>
 </div>

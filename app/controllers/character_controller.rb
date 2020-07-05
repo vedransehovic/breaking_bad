@@ -15,6 +15,7 @@ class CharacterController < Sinatra::Base
   get '/characters/:id' do
     id=params[:id]
     @character = Character.find_by_id(id)  
+    @quotes = Quote.where(author: @character.name)
     #view
     erb :'characters/show'
   end

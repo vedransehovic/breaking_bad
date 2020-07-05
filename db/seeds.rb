@@ -31,3 +31,4 @@ class Api
 end
 
 Api.get_data
+Api.get_quote_data
